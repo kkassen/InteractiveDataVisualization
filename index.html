@@ -1,0 +1,75 @@
+<!--CSC 468: Group Project
+Author: Kyle Arick Kassen
+Group Name: DataVizWhiz
+Members: Kyle Kassen, Vi Nguyen, Thang Tran, Ximan Liu-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- import d3.js library -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <!-- javascript files -->
+    <script src="choroplethMap.js"></script>
+    <script src="heatMap.js"></script>
+    <script src="bubbleChart.js"></script>
+    <script src="barChart.js"></script>
+    <!-- CSS files-->
+    <link rel="stylesheet" href="choroplethMap.css">
+    <!-- color palette -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+</head>
+<style>
+    div {
+        background: aliceblue;
+    }
+    svg {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 50px;
+    }
+</style>
+
+<body>
+<div id="uno"></div>
+<br>
+<div id="dos"></div>
+<br>
+<div id="tres"></div>
+<br>
+<div id="cuatro"></div>
+
+<script>
+    var choroplethSVG = d3.select("svg")
+
+    var bubbleChartSVG = d3.select("svg")
+
+    var heatMapSVG = d3.select("svg")
+
+    var barChartSVG = d3.select("svg")
+
+    CMV = choroplethMapViz();
+    CMV.drawChoroplethMap(choroplethSVG);
+
+    BCV = bubbleChartViz();
+    BCV.drawBubbleChart(bubbleChartSVG);
+
+    HMV = heatMapViz();
+    HMV.drawHeatMap(heatMapSVG);
+
+    BGV = barChartViz();
+    BGV.drawBarChart(barChartSVG);
+
+    CMV.dispatch.on("este", function () {
+        rectArray = d3.selectAll("rect").data()
+        filterArray = rectArray.filter((group) => arr.includes(group.group))
+            d3.selectAll("rect").data(filterArray, function (d) {
+                return d.group + ':' + d.variable}).style("stroke", "#a117fe").style("stroke-width", 4)
+    });
+
+
+</script>
+</body>
+</html>
