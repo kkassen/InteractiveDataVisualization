@@ -1,7 +1,3 @@
-/*<!--CSC 468: Group Project
-Author: Kyle Arick Kassen
-Group Name: DataVizWhiz
-Members: Kyle Kassen, Vi Nguyen, Thang Tran, Ximan Liu-->*/
 /*<!-- REFERENCE: https://www.d3-graph-gallery.com/graph/heatmap_style.html -->*/
 
 var heatMapViz = function() {
