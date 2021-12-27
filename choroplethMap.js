@@ -1,7 +1,4 @@
-/*CSC 468: Group Project
-Author: Kyle Arick Kassen
-Group Name: DataVizWhiz
-Members: Kyle Kassen, Vi Nguyen, Thang Tran, Ximan Liu
+/*Author: Kyle Arick Kassen
 **Reference: Interactive Data Visualization for the Web,
        2nd Edition, Scott Murray, Chapters 14 ** */
 
